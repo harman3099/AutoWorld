@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+
+    <div class="container" id="nopad">
+        <div class="jumbotron">
+            <div class="container header">
+                <div class="row">
+                    <h2 style="text-align: center;">Add a comment to <%= car.name %></h2>
+                    <div style="width: 30%; margin: 30px auto;">
+                        
+                        <form action="/cars/<%=car._id%>/comments" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="comment[text]" placeholder="Enter your comment">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-lg btn-block">Submit!</button>
+                            </div> 
+                        </form>
+                        <a class="btn btn-primary" href="/cars/<%=car._id%>">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<%- include("../partials/footer") %>

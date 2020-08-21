@@ -1,0 +1,36 @@
+<%- include("../partials/header") %>
+
+<div class="container" id="wlcmpage">
+
+    <header class="jumbotron" id="nopad">
+        <div class="container header">
+            <h2> Welcome to Fascinating World of Vehicles!</h2>
+            <hr>
+            <p>This is the place where we can appreciate the beauty of Vehicles we use everday. Please feel free to sign up and share your Car/SUV/Truck with us!</p>
+            <p>
+                <a class="btn btn-primary btn-lg"  href="/cars/new">Add New</a>
+            </p>
+        </div>
+    </header>
+        
+    <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+        <% Cars.forEach(function(car){ %>
+            <div class="col-md-3 col-sm-6">
+                <div id="img1" class="thumbnail">
+                    <img src="<%= car.image %>">
+                    <div class="caption">
+                        <h4> <%= car.name %> </h4>  
+                    </div>
+                    <p>
+                        <a href="/cars/<%= car._id %>" class="info1 btn btn-primary">More info</a>
+                    </p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+</div>
+
+<%- include("../partials/footer") %>
+
+    

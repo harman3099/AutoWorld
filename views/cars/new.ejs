@@ -1,0 +1,33 @@
+<%- include("../partials/header") %>
+
+    <div class="container">
+        <div class="jumbotron" id="nopad">
+            <div class="container header">
+                <div class="row">
+                    <h2 style="text-align: center;">Add your vehicle</h2>
+                    <div style="width: 30%; margin: 30px auto;">
+                        
+                        <form action="/cars" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="car[name]" placeholder="Vehicle's make and model">
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" name="image" accept="image/*" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" name="car[description]" placeholder="Please tell us what do you like about this vehicle" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-lg btn-block">Submit!</button>
+                            </div> 
+                        </form>
+                        <a class="btn btn-primary" href="/cars">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<%- include("../partials/footer") %>

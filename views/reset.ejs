@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+    <div class="container">
+        <div class="jumbotron" id="nopad">
+            <div class="container header">
+                <div class="row">
+                    <h2 style="text-align: center;">Forgot password!</h2>
+                    <div style="width: 30%; margin: 30px auto;">
+                        
+                        <form action="/reset/<%= token %>" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" placeholder="New password" >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="confirm" placeholder="Confirm password" >
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-lg btn-block">Reset Password!</button>
+                            </div> 
+                        </form>
+                        <a class="btn btn-primary" href="/cars">Home page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<%- include("partials/footer") %>
